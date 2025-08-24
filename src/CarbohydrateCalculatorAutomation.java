@@ -57,7 +57,17 @@ public class CarbohydrateCalculatorAutomation {
      */
     private static void setupWebDriver() {
         try {
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+            // Detect operating system and set appropriate ChromeDriver path
+            String os = System.getProperty("os.name").toLowerCase();
+            String chromedriverPath;
+            
+            if (os.contains("win")) {
+                chromedriverPath = "drivers/chromedriver.exe";
+            } else {
+                chromedriverPath = "drivers/chromedriver";
+            }
+            
+            System.setProperty("webdriver.chrome.driver", chromedriverPath);
             
             // Configure Chrome options for stable automation
             ChromeOptions options = new ChromeOptions();

@@ -1,58 +1,61 @@
-# Carbohydrate Calculator Test Automation
+# Carbohydrate Calculator Test Automation Suite
 
-Automated test suite for the carbohydrate calculator website using Selenium WebDriver and Java. This project includes a comprehensive test suite of 26 test cases, with 6 automated end-to-end scenarios demonstrating advanced testing capabilities covering multiple user scenarios and validation workflows.
+A comprehensive automated test suite for the carbohydrate calculator website using Selenium WebDriver and Java. This project demonstrates advanced testing capabilities covering multiple user scenarios and validation workflows.
 
 ## Prerequisites
 
-- Java 8 or higher
-- Chrome browser
-- ChromeDriver (matching your Chrome version)
+- Java JDK 17 or higher
+- Google Chrome browser
+- Internet connection (for downloading ChromeDriver and running tests)
 
-## Dependencies
+## Quick Start
 
-All required JAR files are included in the lib/ directory:
+### Windows Users
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Carbohydrate-Calculator-Test-Suite
 
-- selenium-api-4.15.0.jar
-- selenium-chrome-driver-4.15.0.jar
-- selenium-chromium-driver-4.15.0.jar
-- selenium-http-4.15.0.jar
-- selenium-json-4.15.0.jar
-- selenium-manager-4.15.0.jar
-- selenium-os-4.15.0.jar
-- selenium-remote-driver-4.15.0.jar
-- selenium-support-4.15.0.jar
-- byte-buddy-1.14.5.jar
-- commons-exec-1.3.jar
-- failsafe-3.3.2.jar
-- gson-2.10.1.jar
-- guava-32.1.2-jre.jar
-- opentelemetry-api-1.28.0.jar
-- opentelemetry-context-1.28.0.jar
+# Run setup (installs Java and ChromeDriver)
+scripts\setup-windows.bat
 
-## Setup
-
-1. Clone the repository
-2. Download ChromeDriver from https://chromedriver.chromium.org/ that matches your Chrome version
-3. Place ChromeDriver in the drivers/ directory
-4. Make sure Java JDK is installed
-
-## Running the Tests
-
-Compile and run the automation:
-
-**Windows:**
-```
-javac -cp "lib\*" -d . src\CarbohydrateCalculatorAutomation.java
-java -cp ".;lib\*" CarbohydrateCalculatorAutomation
+# Run the tests
+scripts\run-tests-windows.bat
 ```
 
-**Mac/Linux:**
-```
-javac -cp "lib/*" -d . src/CarbohydrateCalculatorAutomation.java
-java -cp ".:lib/*" CarbohydrateCalculatorAutomation
+### Mac/Linux Users
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Carbohydrate-Calculator-Test-Suite
+
+# Make scripts executable
+chmod +x scripts/*.sh
+
+# Run setup (installs Java and ChromeDriver)
+./scripts/setup-mac-linux.sh
+
+# Run the tests
+./scripts/run-tests-mac-linux.sh
 ```
 
-## Test Cases Summary
+## Project Structure
+
+```
+Carbohydrate-Calculator-Test-Suite/
+├── src/
+│   └── CarbohydrateCalculatorAutomation.java    # Main test automation class
+├── lib/                                          # Selenium and dependencies
+├── scripts/                                      # Setup and run scripts
+│   ├── setup-windows.bat                        # Windows setup script
+│   ├── run-tests-windows.bat                    # Windows test runner
+│   ├── setup-mac-linux.sh                       # Mac/Linux setup script
+│   └── run-tests-mac-linux.sh                   # Mac/Linux test runner
+├── drivers/                                      # ChromeDriver (auto-downloaded)
+└── README.md                                     # This file
+```
+
+## Test Cases
 
 The automation suite includes 6 comprehensive end-to-end test scenarios:
 
@@ -117,44 +120,27 @@ WebDriver closed successfully
 
 ## Technical Implementation
 
-- **Language**: Java
-- **Testing Framework**: Selenium WebDriver
+- **Language**: Java 17+
+- **Testing Framework**: Selenium WebDriver 4.15.0
 - **Browser**: Chrome with ChromeDriver
 - **Performance**: Optimized navigation reduces execution time
 - **Reliability**: Robust element interaction with wait strategies
+- **Cross-Platform**: Works on Windows, macOS, and Linux
 
-## Project Structure
+## Manual Setup (Alternative)
 
-```
-Carbohydrate-Calculator-Test-Suite/
-├── src/
-│   └── CarbohydrateCalculatorAutomation.java
-├── lib/
-│   ├── selenium-api-4.15.0.jar
-│   ├── selenium-chrome-driver-4.15.0.jar
-│   ├── selenium-chromium-driver-4.15.0.jar
-│   ├── selenium-http-4.15.0.jar
-│   ├── selenium-json-4.15.0.jar
-│   ├── selenium-manager-4.15.0.jar
-│   ├── selenium-os-4.15.0.jar
-│   ├── selenium-remote-driver-4.15.0.jar
-│   ├── selenium-support-4.15.0.jar
-│   ├── byte-buddy-1.14.5.jar
-│   ├── commons-exec-1.3.jar
-│   ├── failsafe-3.3.2.jar
-│   ├── gson-2.10.1.jar
-│   ├── guava-32.1.2-jre.jar
-│   ├── opentelemetry-api-1.28.0.jar
-│   └── opentelemetry-context-1.28.0.jar
-├── drivers/
-│   └── chromedriver
-├── Test Document.xlsx
-└── README.md
-```
+If you prefer to set up manually:
+
+1. Install Java JDK 17 or higher
+2. Install Google Chrome browser
+3. Download ChromeDriver matching your Chrome version
+4. Place ChromeDriver in the drivers/ folder
+5. Run: `javac -cp "lib/*" -d . src/CarbohydrateCalculatorAutomation.java`
+6. Run: `java -cp ".:lib/*" CarbohydrateCalculatorAutomation` (Mac/Linux) or `java -cp ".;lib/*" CarbohydrateCalculatorAutomation` (Windows)
 
 ## Troubleshooting
 
 - Ensure Chrome browser is installed and up to date
 - Verify Java is properly installed with `java -version`
-- Make sure ChromeDriver version matches your Chrome browser version
 - If tests fail, verify internet connectivity to access the calculator website
+- Run the setup script again if ChromeDriver issues occur
