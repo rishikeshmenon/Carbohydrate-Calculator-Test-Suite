@@ -13,7 +13,7 @@ Automated test suite for the carbohydrate calculator website using Selenium WebD
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd Interview
+cd <directory here>
 ```
 
 2. Install dependencies and setup ChromeDriver:
