@@ -96,7 +96,6 @@ WebDriver closed successfully
 - **Language**: Java
 - **Testing Framework**: Selenium WebDriver
 - **Browser**: Chrome with ChromeDriver
-- **Architecture**: Page interaction with JavaScript fallbacks
 - **Performance**: Optimized navigation reduces execution time
 - **Reliability**: Robust element interaction with wait strategies
 
