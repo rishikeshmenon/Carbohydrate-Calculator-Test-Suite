@@ -1,0 +1,48 @@
+# Compiled Java classes
+*.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse files
+.project
+.classpath
+.settings/
+
+# NetBeans files
+nbproject/
+build.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Browser data
+*.cache
+
+# Test reports (if added later)
+test-reports/
+screenshots/
+
+# Local environment files
+.env
+.env.local
+
+# Backup files
+*.bak
+*.backup
+
+# ChromeDriver logs
+chromedriver.log
